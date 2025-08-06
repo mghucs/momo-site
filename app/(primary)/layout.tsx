@@ -15,7 +15,7 @@ export default function DashboardLayout({
     <div className="flex flex-col min-h-screen mx-auto max-w-7xl px-4 pt-8 pb-16">
       <div className="flex-grow">
         <Header></Header>
-        {/* <Slider></Slider> */}
+        <Slider></Slider>
         <main>{children}</main>
         <Footer></Footer>
       </div>
