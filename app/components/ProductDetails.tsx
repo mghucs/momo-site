@@ -2,8 +2,16 @@ import { Card } from '@/components/Card'
 import { Separator } from '@/components/Separator'
 import Star from '@/components/Star'
 import React from 'react'
+import { ProductType } from '@/components/types'
 
-const ProductDetails = () => {
+const ProductDetails = async (id : string) => {
+  const url = `http://localhost:3000/api/products/${id.id}`
+  const data = await fetch(url);
+  const jsonData = await data.json();
+  const product=  jsonData.message;
+
+  console.log(product)
+  console.log(url)
   return (
     <div className='container mx-auto'>
       <div className='min-h-full flex flex-col lg:flex-row py-14'>
@@ -15,8 +23,8 @@ const ProductDetails = () => {
         <div className="w-full lg:w-[50%] h-full lg:h-auto lg:flex lg:ml-5">
           <div className="w-[500px] h-full lg:h-auto lg:w-full flex-col gap-2 flex mt-10 lg:mt-0 m-auto">
             <div className="flex-col gap-2.5 flex">
-              <div className="text-sky-900 font-semibold text-2xl">Play game</div>
-              <div className="text-neutral-600 text-2xl font-semibold">$11,70</div>
+              <div className="text-sky-900 font-semibold text-2xl">{product.name}</div>
+              <div className="text-neutral-600 text-2xl font-semibold">${product.price}</div>
             </div>
             <div className="justify-normal gap-2.5 flex">
               <Star count={5} />

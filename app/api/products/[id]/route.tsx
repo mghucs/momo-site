@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
- 
-const PRODUCTS : { [key: string]: any } = {
+import { ProductsType } from '@/components/types'
+
+const PRODUCTS : ProductsType = {
     1: {
         id: 1,
         name: "Canon camera",
