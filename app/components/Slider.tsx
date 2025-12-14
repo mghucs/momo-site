@@ -101,10 +101,10 @@ export default function Slider() {
         controlsComponent={(props: FrameRenderedComponentPropsWithIndex) =>
             <>
                 <button onClick={props.incrementCarousel} className="absolute right-2 bottom-1/2 bg-white rounded-sm px-2">
-                    Increment
+                    {">"}
                 </button>
                 <button onClick={props.decrementCarousel} className="absolute left-2 bottom-1/2 bg-white rounded-sm px-2">
-                    Decrement
+                    {"<"}
                 </button>
                 <div className="flex space-x-2 justify-center">
                     {Array(2)
