@@ -65,16 +65,16 @@ const PRODUCTS : ProductsType = {
 // }
 
 
-type ResponseData = {
-  message: string | undefined
-}
-export async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
-) {
-  const { id } = req.query;
-  res.status(200).json({ message: (id? id[0] : undefined) })
-}
+// type ResponseData = {
+//   message: string | undefined
+// }
+// export async function handler(
+//   req: NextApiRequest,
+//   res: NextApiResponse<ResponseData>
+// ) {
+//   const { id } = req.query;
+//   res.status(200).json({ message: (id? id[0] : undefined) })
+// }
 
 export async function GET(req: Request, 
   { params }: { params: Promise<{ id: string }> }){
@@ -84,3 +84,5 @@ export async function GET(req: Request,
         headers:{ "Content-Type": "application/json" }
     })
 }
+
+// export { handler as GET }

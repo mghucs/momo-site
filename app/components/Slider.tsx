@@ -5,7 +5,7 @@ import { FrameRenderedComponentPropsWithIndex } from "./carousel/types";
 import clsx from "clsx";
 
 export default function Slider() {
-    let frames: Frame[] = [
+    const frames: Frame[] = [
         {
             desktop: {
                 image: {

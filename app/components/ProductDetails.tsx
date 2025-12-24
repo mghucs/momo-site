@@ -4,7 +4,7 @@ import Star from '@/components/Star'
 import React from 'react'
 import { ProductType } from '@/components/types'
 
-const ProductDetails = async (id : string) => {
+const ProductDetails = async (id : {id: string }) => {
   const url = `http://localhost:3000/api/products/${id.id}`
   const data = await fetch(url);
   const jsonData = await data.json();
