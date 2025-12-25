@@ -10,7 +10,7 @@ export default function DashboardLayout({
       <div className="flex-grow">
         <Header></Header>
         <main>{children}</main>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </div>
     </div>
   )
