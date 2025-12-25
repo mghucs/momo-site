@@ -19,9 +19,9 @@ const Header = () => {
         
         <nav className="ml-8 flex gap-x-8 text-gray-900">
           <HeaderNavLink href={"/"}>Home</HeaderNavLink>
-          <HeaderNavLink href={"/products"}>Products</HeaderNavLink>
+          {/* <HeaderNavLink href={"/products"}>Products</HeaderNavLink> */}
         </nav>
-        <div className="ml-8 flex-1"><SearchField/></div>
+        {/* <div className="ml-8 flex-1"><SearchField/></div> */}
       </div>
 
     </header>
